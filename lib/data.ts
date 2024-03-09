@@ -1,10 +1,11 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { LuTerminalSquare, LuFrame, LuLineChart } from "react-icons/lu";
+import timeline1 from "@/public/timeline1.png"
+import proj1 from "@/public/proj1.png"
+import proj2 from "@/public/proj2.png"
+import proj3 from "@/public/proj3.png"
+
+
 
 export const links = [
   {
@@ -35,28 +36,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated Full-Stack Developer Bootcamp",
+    location: "Metro Manila",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "I graduated after 3 months of course material involving the creation of a front-end, back-end, full-stack project.",
+    icon: React.createElement(LuTerminalSquare),
+    date: "2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Graduated UI/UX Design and Research Bootcamp",
+    location: "Metro Manila",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "To further enrich my skills as a frontend developer, I finished a UI/UX bootcamp ",
+    icon: React.createElement(LuFrame),
+    date: "2022-2023",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Metro Manila",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I'm now a full-stack developer working as a freelancer. I am also currently looking for full-time work opportunities.",
+    icon: React.createElement(LuLineChart),
+    date: "2023 - present",
   },
 ] as const;
 
@@ -64,23 +65,23 @@ export const projectsData = [
   {
     title: "CorpComment",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "I worked on...",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    imageUrl: proj1,
   },
   {
     title: "rmtDev",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "Project that. It features...",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    imageUrl: proj2,
   },
   {
     title: "Word Analytics",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "A ... which functions as ...",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: proj3,
   },
 ] as const;
 

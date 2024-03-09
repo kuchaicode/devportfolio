@@ -1,7 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import { links } from "@/lib/data";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -15,8 +17,16 @@ export default function Header() {
         {/* End of nav bg */}
         {/* Start of nav links */}
 
-        <nav className='fixed top-[0.15rem] left-1/2 h-12'>
-
+        <nav className='fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0'>
+            <ul>
+                {/* data.ts array here */}
+            { links.map(link => (
+                <li key={link.hash}>
+                    <Link href={link.hash}>{link.name}</Link>
+                </li>
+                ))
+            }
+            </ul>
         </nav>
 
     </header>
