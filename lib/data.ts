@@ -63,27 +63,28 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Project One Title",
     description:
-      "I worked on...",
+      "I worked on...I love cheese, especially babybel parmesan. When the cheese comes out everybody's happy when the cheese Swiss manchego fromage swiss castello chalk and cheese roquefort stilton.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: proj1,
   },
   {
-    title: "rmtDev",
+    title: "Project Two Title",
     description:
-      "Project that. It features...",
+      "Project that. It features...I worked on...I love cheese, especially babybel parmesan. When the cheese comes out everybody's happy when the cheese roquefort stilton.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: proj2,
   },
   {
-    title: "Word Analytics",
+    title: "Project Three Title",
     description:
-      "A ... which functions as ...",
+      "A ... which functions as ...I worked on...I love cheese, especially babybel parmesan. When the cheese comes out everybody's happy when the cheese roquefort stilton.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: proj3,
   },
 ] as const;
+// ^ hardcoding as const
 
 export const skillsData = [
   "HTML",
