@@ -39,9 +39,16 @@ export default function Header() {
                         href={link.hash}>
                         {link.name}
                         
-                        <span className='bg-gray-100 rounded-full absolute inset-0 -z-10'> </span>
+                        {
+                            link.name === activeSection && 
+                            ( 
+                            <span className='bg-gray-100 rounded-full absolute inset-0 -z-10'> </span>
+                            )
+                        }
+                        {/* End of conditional that adds bg to active link */}
+                       
                         </Link>
-                </motion.li>
+                </motion.li> 
                 ))
             }
             </ul>
