@@ -4,6 +4,7 @@ import timeline1 from "@/public/timeline1.png"
 import proj1 from "@/public/proj1.png"
 import proj2 from "@/public/proj2.png"
 import proj3 from "@/public/proj3.png"
+import proj4 from "@/public/proj4.png"
 
 
 
@@ -82,6 +83,13 @@ export const projectsData = [
       "A ... which functions as ...I worked on...I love cheese, especially babybel parmesan. When the cheese comes out everybody's happy when the cheese roquefort stilton.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: proj3,
+  },
+  {
+    title: "Project Four Title",
+    description:
+      "A ... which functions as ...I worked on...I love cheese, especially babybel parmesan. When the cheese comes out everybody's happy when the cheese roquefort stilton.",
+    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    imageUrl: proj4,
   },
 ] as const;
 // ^ hardcoding as const
