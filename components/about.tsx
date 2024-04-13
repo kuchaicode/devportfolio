@@ -12,6 +12,7 @@ export default function About() {
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.185 }}
     id="about"
+    ref={ref}
     >
         <SectionHeading>About Me</SectionHeading>
         <p className='mb-3'>
