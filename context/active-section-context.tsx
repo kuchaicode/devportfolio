@@ -23,13 +23,13 @@ export default function ActiveSectionContextProvider({children}: ActiveSectionCo
     useState<SectionName>('Home');
 
   return (
-  <ActiveSectionContext.Provider 
-  value={{
-    activeSection,
-    setActiveSection,
-  }}>
-    {children}
-  </ActiveSectionContext.Provider>
+    <ActiveSectionContext.Provider 
+    value={{
+        activeSection,
+        setActiveSection,
+    }}>
+        {children}
+    </ActiveSectionContext.Provider>
   
   );
 }
