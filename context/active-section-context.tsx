@@ -1,10 +1,8 @@
 'use client';
 
-import React, { useContext } from 'react'
-import { useState, createContext } from 'react';
-import { links } from '@/lib/data';
+import React, { useState, createContext, useContext } from 'react';
+import type { SectionName } from '@/lib/types';
 
-type SectionName = (typeof links)[number]['name'];
 
 type ActiveSectionContextProviderProps = {
     children: React.ReactNode;
@@ -25,7 +23,7 @@ export default function ActiveSectionContextProvider({children}: ActiveSectionCo
     useState<SectionName>('Home');
 
     const [timeOfLastClick, setTimeOfLastClick] = useState(0);
-    // Track clicked section to disable scroll activation
+    // Track clicked section to disable (temporarily) scroll observer activation 
 
   return (
     <ActiveSectionContext.Provider 
