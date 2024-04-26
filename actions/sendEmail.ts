@@ -25,9 +25,9 @@ export const sendEmail = async (formData: FormData) => {
     }
     // Server-side validation end
 
-
+    let data;
     try {
-    await resend.emails.send ({
+    data = await resend.emails.send ({
         from: "Contact Form <@(%*!()%&#&%!%(&(!)@%&!&@resend.dev>", 
         to: "@(%*!()%&#&%!%(&(!)@%&!&@gmail.com",
         subject: "Message from contact form", 
@@ -44,5 +44,9 @@ export const sendEmail = async (formData: FormData) => {
     return {
         error: getErrorMessage(error)
     }
+    }
+
+    return {
+        data,
     }   
 }

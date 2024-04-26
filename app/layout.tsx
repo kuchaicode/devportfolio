@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,12 +25,14 @@ export default function RootLayout({
         <div className="bg-[#DBD7FB] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
 
         {/* End. Test with other colors later on. */}
-
+  <ThemeContextProvider>
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
+          <Toaster position="top-right" />
         </ActiveSectionContextProvider>
-
+  </ThemeContextProvider>
       </body>
     </html>
   );
