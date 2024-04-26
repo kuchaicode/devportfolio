@@ -1,7 +1,9 @@
 'use server';
 
+import React from "react";
 import { Resend } from "resend";
 import { validateString, getErrorMessage } from '@/lib/utils';
+import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -30,8 +32,12 @@ export const sendEmail = async (formData: FormData) => {
         to: "@(%*!()%&#&%!%(&(!)@%&!&@gmail.com",
         subject: "Message from contact form", 
         reply_to: senderEmail as string,
-        text: message as string,
         // specify variable as string so typescript doesn't think it is null
+        react: React.createElement(ContactFormEmail, {
+            message: message as string, 
+            senderEmail: senderEmail as string
+        })
+        // JSX version: react: <ContactFormEmail message={message} senderEmail={senderEmail} />
     });
 } catch (error: unknown) {
     
